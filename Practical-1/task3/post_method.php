@@ -42,26 +42,50 @@
     <form method="post">
         <h1>Tests</h1>
         <label for="">Question 1:</label><br>
-        <input type="radio" name="q1-answer1" value="q1-ans1">Answer 1 <br>
-        <input type="radio" name="q1-answer1" >Answer 2 <br>
-        <input type="radio" name="q1-answer1" >Answer 3 <br>
-        <input type="radio" name="q1-answer1" >Answer 4 <br>
+        <label>
+            <input type="radio" name="q1-answer1" value="q1-ans1">
+        </label>Answer 1 <br>
+        <label>
+            <input type="radio" name="q1-answer1" >
+        </label>Answer 2 <br>
+        <label>
+            <input type="radio" name="q1-answer1" >
+        </label>Answer 3 <br>
+        <label>
+            <input type="radio" name="q1-answer1" >
+        </label>Answer 4 <br>
 
         <hr>
 
         <label for="">Question 2:</label><br>
-        <input type="radio" name="q2-answer1" >Answer 1 <br>
-        <input type="radio" name="q2-answer1" >Answer 2 <br>
-        <input type="radio" name="q2-answer1" value="q2-ans3">Answer 3 <br>
-        <input type="radio" name="q2-answer1" >Answer 4 <br>
+        <label>
+            <input type="radio" name="q2-answer1" >
+        </label>Answer 1 <br>
+        <label>
+            <input type="radio" name="q2-answer1" >
+        </label>Answer 2 <br>
+        <label>
+            <input type="radio" name="q2-answer1" value="q2-ans3">
+        </label>Answer 3 <br>
+        <label>
+            <input type="radio" name="q2-answer1" >
+        </label>Answer 4 <br>
 
         <hr>
 
         <label for="">Question 3:</label><br>
-        <input type="radio" name="q3-answer1" >Answer 1 <br>
-        <input type="radio" name="q3-answer1" >Answer 2 <br>
-        <input type="radio" name="q3-answer1" >Answer 3 <br>
-        <input type="radio" name="q3-answer1" value="q3-ans4">Answer 4 <br>
+        <label>
+            <input type="radio" name="q3-answer1" >
+        </label>Answer 1 <br>
+        <label>
+            <input type="radio" name="q3-answer1" >
+        </label>Answer 2 <br>
+        <label>
+            <input type="radio" name="q3-answer1" >
+        </label>Answer 3 <br>
+        <label>
+            <input type="radio" name="q3-answer1" value="q3-ans4">
+        </label>Answer 4 <br>
 
         <hr>
 
