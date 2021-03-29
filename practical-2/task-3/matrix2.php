@@ -9,9 +9,10 @@
     <style>
         table,tr,td{
             border: solid 1px black;
-            width: 200px;
+            width: 500px;
             height: 100px;
             border-collapse: collapse;
+            text-align: center;
         }
     </style>
 </head>

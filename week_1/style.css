@@ -1,0 +1,26 @@
+header{
+    border: solid 5px blue;
+    height: 150px;
+    background-color: beige;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.body{
+    border: solid 5px blue;
+    min-height: 250px;
+    background-color: rosybrown;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+footer{
+    border: solid 5px blue;
+    height: 150px;
+    background-color: darkcyan;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+}
