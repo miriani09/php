@@ -35,18 +35,16 @@
 
     <div class="div1">
         <?php
+            $save = rand(10, 100);
             if (isset($_POST['send'])){
 
                 if ($_POST['input_code'] != $_POST['security_code']){
                     echo "Incorrect";
-                    $save = $_POST['security_code'];
                 }
                 else {
                     echo " Correct ";
-                    $save = $_POST['security_code'];
                 }
             }
-            $save = rand(10, 100);
         ?>
     </div>
     <form method="post">

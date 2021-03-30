@@ -38,10 +38,8 @@
         if (isset($_POST['send'])){
             if ($_POST['input_num'] == $_POST['numbers']){
                 echo 'correct';
-                $save = $_POST['numbers'];
             }else {
                 echo 'incorrect';
-                $save = $_POST['numbers'];
             }
         }
         $rand1 = rand(0, 9);

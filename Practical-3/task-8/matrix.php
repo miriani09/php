@@ -42,24 +42,19 @@
     </form>
 
     <?php
-        if (isset($_POST['send'])) {
-            $table = "<table>";
-            for ($row = 0; $row < $_POST['row']; $row++) {
-                $row_count = 0;
-                $col_count = 0;
-                $table .= "<tr>";
-                for ($col = 0; $col < $_POST['col']; $col++) {
-                    $num = rand($_POST['num1'], $_POST['num2']);
-                    $table .= "<td>$num</td>";
-                    $row_count += $num;
-                }
+        $matrix = [];
 
-                $table .= "<th>row sum: $row_count</th>";
-                $table .= "</tr>";
+        for ($i = 0; $i < $_POST['row']; $i++){
+
+            for ($j = 0; $j < $_POST['col']; $j++){
+
+                $rand1 = rand($_POST['num1'], $_POST['num2']);
+                $matrix[$i][$j] = $rand1;
             }
-            $table .= "</table>";
-            echo $table;
         }
+    echo "<pre>";
+        print_r($matrix);
+    echo "</pre>";
     ?>
 </body>
 </html>
