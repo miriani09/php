@@ -12,16 +12,21 @@
     <input  name="a" id="">
     <br>
     <button name="send">Submit</button>
-    <?php
-    $already_selected_value = 1984;
-    $earliest_year = 1950;
-
-    print '<select name="some_field">';
-    foreach (range(date('Y'), $earliest_year) as $x) {
-        print '<option value="'.$x.'"'.($x === $already_selected_value ? ' selected="selected"' : '').'>'.$x.'</option>';
-    }
-    print '</select>';
-    ?>
+    <select name="select">
+        <?php
+        for($i = 1950 ; $i < date('Y'); $i++){
+            echo "<option>$i</option>";
+        }
+        ?>
+        <?php
+            $t = $_POST['a'];
+            if (ctype_upper($t) == TRUE){
+                echo 'correct';
+            }else {
+                echo 'not correct';
+            }
+        ?>
+    </select>
 </form>
 </body>
 </html>
