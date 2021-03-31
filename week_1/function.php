@@ -22,9 +22,7 @@
 
         f2("Mirian", "Kotchlamazashvili");
 
-        f3();
-
-        f4(1, 3, 4);
+    f4(1, 3, 4);
 
         function f5($n){
             if($n == 1){
