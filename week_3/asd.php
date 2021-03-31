@@ -18,7 +18,8 @@
             echo "<option>$i</option>";
         }
         ?>
-        <?php
+    </select>
+    <?php
             $t = $_POST['a'];
             if (ctype_upper($t) == TRUE){
                 echo 'correct';
@@ -26,7 +27,6 @@
                 echo 'not correct';
             }
         ?>
-    </select>
 </form>
 </body>
 </html>
