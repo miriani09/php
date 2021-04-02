@@ -140,9 +140,12 @@
     <form method="post">
         <label for="">Enter Number: </label>
         <input type="number" name="number" >
-        <button>Submit</button>
+        <button name="send">Submit</button>
     </form>
     <hr>
+    <?php
+        if (isset($_POST['send'])){
+    ?>
     <?php
     echo $_POST["number"], "-is jeradi rixvebi ";
     foreach ($matrix1 as $item) {
@@ -199,6 +202,9 @@
         }
     }
     echo $count / 16;
+    ?>
+    <?php
+        }
     ?>
 </body>
 </html>

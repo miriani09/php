@@ -9,6 +9,9 @@
 </head>
 <body>
     <?php
+        echo "<pre>";
+            print_r($ar = [1,2,3,4,5]);
+        echo "</pre>";
     ?>
 </body>
 </html>

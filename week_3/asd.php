@@ -12,21 +12,14 @@
     <input  name="a" id="">
     <br>
     <button name="send">Submit</button>
-    <select name="select">
-        <?php
-        for($i = 1950 ; $i < date('Y'); $i++){
-            echo "<option>$i</option>";
-        }
-        ?>
-    </select>
     <?php
-            $t = $_POST['a'];
-            if (ctype_upper($t) == TRUE){
-                echo 'correct';
-            }else {
-                echo 'not correct';
-            }
-        ?>
+        $len = $_POST['a'];
+        if (is_numeric($len)){
+            echo "correct";
+        }else {
+            echo "not correct";
+        }
+    ?>
 </form>
 </body>
 </html>
