@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        echo "<pre>";
-            print_r($ar = [1,2,3,4,5]);
-        echo "</pre>";
-    ?>
+    <form action="upload.php" enctype="multipart/form-data" method="post">
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <br><br>
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
 </body>
 </html>
