@@ -35,7 +35,7 @@
         }
     ?>
     </form>
-<!--    <form method="post">-->
+    <form method="get">
     <ul>
         <?php
         $files = scandir("folder");
@@ -45,10 +45,14 @@
 
         if (isset($_GET['file'])){
             echo file_get_contents('folder/'.$_GET['file']);
-        }
-
+            echo "<input type='text' name='txt_edit'>";
+            echo "<button name='clk_edit'>Ok</button>";
+            if (isset($_GET['clk_edit'])) {
+                echo file_put_contents('folder/' . $_GET['file'], $s) ;
+            }
+            }
         ?>
     </ul>
-<!--    </form>-->
+    </form>
 </body>
 </html>

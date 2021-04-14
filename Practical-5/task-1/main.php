@@ -1,17 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+<!DOCTYPE html>
+<html>
 <body>
-    <form action="upload.php" enctype="multipart/form-data" method="post">
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <br><br>
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <br><br>
+    <input type="submit" value="Upload Image" name="submit">
+</form>
+
 </body>
 </html>
