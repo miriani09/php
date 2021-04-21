@@ -48,9 +48,9 @@
             echo "<input type='text' name='txt_edit'>";
             echo "<button name='clk_edit'>Ok</button>";
             if (isset($_GET['clk_edit'])) {
-                echo file_put_contents('folder/' . $_GET['file'], s) ;
+                echo file_put_contents('folder/' . $_GET['file'], $_GET['txt_edit']) ;
             }
-            }
+        }
         ?>
     </ul>
     </form>

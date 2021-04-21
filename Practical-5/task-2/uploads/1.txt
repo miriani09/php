@@ -1,0 +1,16 @@
+using System;
+
+namespace MyApplication
+{
+    public class Program
+    {
+        static void MyMethod(string fname)
+        {
+            Console.WriteLine(fname + " გვარი");
+        }
+        static void Main(string[] args)
+        {
+            MyMethod("სახელი");
+        }
+    }
+}

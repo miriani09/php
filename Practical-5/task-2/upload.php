@@ -42,7 +42,6 @@
                 }
             }
         }
-
         $files = scandir('uploads/');
         for ($i = 2; $i < count($files); $i++){
             echo '<p><a href="upload.php?file='.$i.'">'.$files[$i].'</a></p>';
@@ -50,10 +49,10 @@
         }
 
         echo "<hr>";
-            if(isset($_GET['file'])){
-                $file = 'uploads/'.$files[$_GET['file']];
-                echo nl2br(file_get_contents($file));
-            }
+        if(isset($_GET['file'])){
+            $file = 'uploads/'.$files[$_GET['file']];
+            echo nl2br(file_get_contents($file));
+        }
 
     ?>
 </body>
