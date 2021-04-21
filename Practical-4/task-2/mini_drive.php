@@ -94,7 +94,11 @@
         <?php
         $folder = scandir("folders");
         for ($i = 2;$i < count($folder); $i++){
-            echo "<li><a href='folders/".$folder[$i]."'>".$folder[$i]."</a></li>";
+            echo "<li><a href='mini_drive.php?file=".$i."'>".$folder[$i]."</a></li>";
+        }
+        if(isset($_GET['file'])){
+            $file = "folders/".$folder[$_GET['file']];
+            echo file_get_contents($file);
         }
         ?>
     </ul>

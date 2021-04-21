@@ -14,7 +14,7 @@
     }
     ?>
 </div>
-<div class="file">
+<div>
     <?php
     if(isset($_GET['file'])){
         $file = "root/".$files[$_GET['file']];
