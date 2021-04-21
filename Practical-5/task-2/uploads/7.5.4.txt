@@ -1,0 +1,36 @@
+using System;
+
+namespace MyApplication
+{
+    public abstract class Employee
+    {
+        public abstract int calculate_annual_sallary();
+    }
+
+    class Annual_sallary : Employee
+    {
+        int sallary;
+        public Annual_sallary(int sallary)
+        {
+            this.sallary = sallary;
+        }
+        public override int calculate_annual_sallary()
+        {
+            return sallary * 12;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int monthly_sallary = 2500;
+            Annual_sallary sallary = new Annual_sallary(monthly_sallary);
+            int total_annual_sallary = sallary.calculate_annual_sallary();
+
+            Console.WriteLine($"If an employee has {monthly_sallary} GEL per month he will have {total_annual_sallary} GEL per year");
+
+            Console.ReadKey();
+        }
+    }
+}

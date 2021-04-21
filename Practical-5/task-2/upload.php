@@ -18,34 +18,26 @@
     <?php
         if (isset($_POST['submit'])) {
 
-            $target_dir = "uploads/";
-            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-            $uploadOk = 1;
+            $target_file = 'uploads/' . basename($_FILES["fileToUpload"]["name"]);
 
             if (file_exists($target_file)) {
                 echo "Sorry, file already exists.";
-                $uploadOk = 0;
             }
 
             if ($_FILES["fileToUpload"]["size"] > 50000000) {
                 echo "Sorry, your file is too large.";
-                $uploadOk = 0;
             }
 
-            if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
             } else {
-                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
-                } else {
-                    echo "Sorry, there was an error uploading your file.";
-                }
+                echo "Sorry, there was an error uploading your file.";
             }
         }
         $files = scandir('uploads/');
         for ($i = 2; $i < count($files); $i++){
             echo '<p><a href="upload.php?file='.$i.'">'.$files[$i].'</a></p>';
-            echo '<button><a href="upload.php?file=" download='.$files[$i].'>Download</a></button>';
+            echo '<button><a href="uploads/'.$files[$i].'" download='.$files[$i].'>Download</a></button>';
         }
 
         echo "<hr>";
@@ -53,7 +45,6 @@
             $file = 'uploads/'.$files[$_GET['file']];
             echo nl2br(file_get_contents($file));
         }
-
     ?>
 </body>
 </html>
