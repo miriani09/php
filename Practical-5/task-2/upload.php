@@ -16,8 +16,10 @@
         <br><br>
     </form>
     <?php
+        if (!is_dir('uploads')){
+            mkdir('uploads');
+        }
         if (isset($_POST['submit'])) {
-
             $target_file = 'uploads/' . basename($_FILES["fileToUpload"]["name"]);
 
             if (file_exists($target_file)) {
