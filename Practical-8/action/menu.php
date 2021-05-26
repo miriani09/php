@@ -27,10 +27,10 @@ if (isset($_POST['submit'])){
     <title>Data</title>
 </head>
 <body>
-<form method="post" class="mb-3 div1">
-    <input type="text" class="form-control" name="title" placeholder="Title">
-    <textarea name="text" cols="30" rows="10" class="form-control" placeholder="Enter Text..."></textarea>
-    <button class="btn btn-primary" name="submit">Submit</button>
-</form>
+    <form method="post" class="mb-3 div1">
+        <input type="text" class="form-control" name="title" placeholder="Title">
+        <textarea name="text" cols="30" rows="10" class="form-control" placeholder="Enter Text..."></textarea>
+        <button class="btn btn-primary" name="submit">Submit</button>
+    </form>
 </body>
 </html>

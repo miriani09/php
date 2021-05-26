@@ -1,0 +1,13 @@
+.a1{
+    margin: 20px !important;
+}
+.div1{
+    width: 300px !important;
+}
+input, textarea{
+    margin-top: 10px !important;
+}
+
+.txt{
+    word-wrap: break-word !important;
+}

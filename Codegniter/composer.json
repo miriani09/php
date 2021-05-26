@@ -1,0 +1,38 @@
+{
+	"name": "awan/ci4-gentelella",
+	"type": "project",
+	"description": "CodeIgniter 4 integrated with Admin Template Gentelella",
+	"homepage": "https://awan.es",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Awan",
+			"email": "hermawan9815@gmail.com",
+			"homepage": "https://awan.es",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.2",
+		"codeigniter4/framework": "^4.0.4"
+	},
+	"require-dev": {
+		"fzaninotto/faker": "^1.9@dev",
+		"mikey179/vfsstream": "1.6.*",
+		"phpunit/phpunit": "^8.5"
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Support\\": "tests/_support"
+		}
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"@composer dump-autoload"
+		],
+		"test": "phpunit"
+	},
+	"support": {
+		"source": "https://github.com/awanz/ci4-gentelella"
+	}
+}
