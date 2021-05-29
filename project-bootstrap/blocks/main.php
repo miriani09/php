@@ -39,10 +39,6 @@
 
 <h5 class="col lang" key="new_book" >ინფორმაციული ტექნოლოგიები</h5>
 
-
-
-
-
 <div class="owl-carousel owl-theme" style="width: 82%; margin: auto">
     <?php
     $select_query = "SELECT * FROM book WHERE category_id = 1";
@@ -76,5 +72,42 @@
     }
     ?>
 </div>
+
 <hr>
+
+<h5 class="col lang" key="new_book" >არქიტექტურა</h5>
+
+<div class="owl-carousel owl-theme" style="width: 82%; margin: auto">
+    <?php
+    $select_query = "SELECT * FROM book WHERE category_id = 2";
+    $result = mysqli_query($conn, $select_query);
+
+    foreach ($result as $items){
+        ?>
+        <div >
+            <div class="item" >
+                <?php echo $items['title'] ?>
+                <br>
+                <a href="<?php echo $items['pdf'] ?>" target="_blank">
+                    <img src="<?php echo $items['image'] ?>" alt="" style="width: 200px; height: 200px;">
+                </a>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $('.owl-carousel').owlCarousel({
+                    dots:false,
+                    loop:true,
+                    margin:10,
+                    nav:true,
+                    items: 10,
+                })
+            })
+
+        </script>
+        <?php
+    }
+    ?>
+</div>
 

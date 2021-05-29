@@ -4,9 +4,10 @@
 
 if (isset($_GET['delete'])) {
     $del = $_GET['delete'];
+    $category = $_GET['category'];
     $del_query = "DELETE FROM book WHERE id = '$del'";
     if (mysqli_query($conn, $del_query)) {
-        header("location:view_books.php?category= 1");
+        header("location:view_books.php?category=$category");
     } else {
         echo "error: " . $del_query . "<br>" . mysqli_error($conn);
     }
@@ -62,8 +63,7 @@ if (isset($_GET['delete'])) {
             <td>
                 <a href="update.php?edit=<?=$items['id']?>" type="button" class="btn btn-success">Edit</a>
 
-                <a href="view_books.php?delete=<?=$items['id']?>?c=<?=$items['category_id']?>" type="button" class="btn btn-danger">Delete</a>
-
+                <a href="view_books.php?delete=<?=$items['id']?>&category=<?=$items['category_id']?>" type="button" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         <?php

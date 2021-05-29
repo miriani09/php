@@ -33,7 +33,7 @@ if (isset($_GET['submit'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Add Books</title>
 </head>
@@ -56,12 +56,21 @@ if (isset($_GET['submit'])) {
             <input class="form-control" name="pdf" type="file" >
         </div>
         <br>
+
         <select class="form-select" name="cat" aria-label="Default select example">
-            <option selected>Choose Category</option>
-            <option value="1" name="1">Information Technology</option>
-            <option value="2" name="2">Architecture</option>
-            <option value="3" name="3">Energy</option>
+            <?php
+            $select = "SELECT title, id FROM category ";
+            $get = mysqli_query($conn, $select);
+            foreach ($get as $item){
+            $title = $item['title'];
+            $id = $item['id'];
+            ?>
+            <option name="category" value = "<?= $id ?>"><?php echo $title ?></option>
+                <?php
+            }
+            ?>
         </select>
+
         <br>
         <button name="submit" class="btn btn-primary">Submit</button>
     </form>
