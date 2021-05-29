@@ -34,11 +34,11 @@
         </tr>
         </thead>
         <?php
-        if (isset($_GET['food'])) {
-            $user_comments = $_GET['food'];
-            $select_query = "SELECT * FROM comment WHERE food_id = '$user_comments'";
-            $result = mysqli_query($conn, $select_query);
-        foreach ($result as $i => $items){
+            if (isset($_GET['food'])) {
+                $user_comments = $_GET['food'];
+                $select_query = "SELECT * FROM comment WHERE food_id = '$user_comments'";
+                $result = mysqli_query($conn, $select_query);
+            foreach ($result as $i => $items){
         ?>
         <tbody>
         <tr>

@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
 <form method="post" class="form1">
     <input class="form-control" name="update_title" value="<?php echo $title?>"  type="text" placeholder="Enter food name" aria-label="default input example">
     <br>
-    <textarea class="form-control" name="update_description" type="text" rows="10" placeholder="Enter Recipe..." aria-label="default input example"><?php echo htmlspecialchars($description);?></textarea>
+    <textarea class="form-control" name="update_description" type="text" rows="10" placeholder="Enter Recipe..." ><?php echo htmlspecialchars($description);?></textarea>
     <br>
     <button name="submit" class="btn btn-primary">Submit</button>
 </form>

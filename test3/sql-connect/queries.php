@@ -28,7 +28,7 @@ if (isset($_GET['delete'])){
 }
 
 
-//IN COMMENT FOOD TITLE
+//IN COMMENT GET FOOD TITLE
 if (isset($_GET['food'])) {
     $title = $_GET['food'];
     $select_query = "SELECT title FROM foods WHERE id = '$title'";
