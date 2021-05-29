@@ -1,4 +1,4 @@
-﻿/*Navigation Menu*/
+/*Navigation Menu*/
 body {
     overflow-y: scroll;
     background-color: rgb(211, 214, 216) !important;
@@ -161,5 +161,15 @@ header a:hover{
 .form-group,.form-check-label,.btn-primary{
     position: relative;
     top: 20px;
+}
+
+.form1{
+    width: 300px !important;
+    margin: 20px !important ;
+}
+
+h2{
+    width: 600px;
+    margin: 20px;
 }
 
