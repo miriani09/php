@@ -1,5 +1,6 @@
 <?php
     require_once "../sql-connect/conn.php";
+
     if (isset($_GET['submit'])) {
         $mail = $_GET['mail'];
         $password = $_GET['password'];
@@ -26,7 +27,7 @@
 </head>
 <body style="background-color: rgb(32, 39, 46) !important;">
 <?php
-    include "header.php";
+    require_once "header.php";
 ?>
 <div style="height: 65px; position: relative;"></div>
 <!--log-in-->
@@ -44,7 +45,7 @@
     <button type="submit" name="submit" class="btn btn-primary lang" key="submit" style="box-shadow: none;">შესვლა</button>
 </form>
 
-<script src="../reg.js"></script>
+<script src="./Js/reg.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>

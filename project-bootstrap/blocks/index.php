@@ -20,12 +20,12 @@
 <body>
 
 <?php
-include "header.php";
-include "main.php";
+require_once "header.php";
+require_once "main.php";
 ?>
 
 
-<script src="../slider.js">
+<script src="./Js/slide.js">
     changeSlide();
 
 </script>

@@ -43,7 +43,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item lang" key="log-in" href="log-in.php">შესვლა</a></li>
                             <li><a class="dropdown-item lang" key="reg" href="registration.php">რეგისტრაცია</a></li>
-                            <li><a class="dropdown-item lang" key="reg" href="admin.php">ადმინ პანელი</a></li>
+                            <li><a class="dropdown-item lang" key="reg" href="secure_admin.php">ადმინ პანელი</a></li>
                         </ul>
                 </ul>
                 <form class="d-flex">

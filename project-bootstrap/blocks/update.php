@@ -15,9 +15,13 @@ foreach ($result as $items) {
 if (isset($_POST['submit'])) {
     $edit = $_GET['edit'];
 
+    $dir_pic = "../pic_books/it/";
+    $dir_pdf = "../pdf/it/";
+
+
     $title = $_POST['title'];
-    $image= $_POST['image'];
-    $pdf = $_POST['pdf'];
+    $image = "../pic_books/it/".$_POST['image'];
+    $pdf = "../pdf/it/".$_POST['pdf'];
     $category = $_POST['category'];
 
 
@@ -45,7 +49,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
 <?php
-    include "admin.php";
+    require_once "admin.php";
 ?>
 <p class="fs-2" style="margin-left: 20px; color: #717070">Edit Books</p>
 <form method="post" class="form1">

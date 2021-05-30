@@ -36,19 +36,19 @@ function validatePassword(password) {
     document.getElementById("msg").style.color = color;
 }
 function password_show() {
-    x = document.getElementById("pwd");
-    x2 = document.getElementById("pwd2");
-    if (x.type === "password" && x2.type === "password") {
-        x.type = "text";
-        x2.type = "text";
+    let pass1 = document.getElementById("pwd");
+    let pass2 = document.getElementById("pwd2");
+    if (pass1.type === "password" && pass2.type === "password") {
+        pass1.type = "text";
+        pass2.type = "text";
     }else {
-        x.type = "password";
-        x2.type = "password";
+        pass1.type = "password";
+        pass2.type = "password";
     }
 }
 
 function mail_check(){
-    Email=document.getElementById("mail");
+    let Email = document.getElementById("mail");
 
     const filterEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if(!filterEmail.test(Email.value)){
@@ -60,7 +60,7 @@ function mail_check(){
     }
 }
 function name_check(){
-    name1 = document.getElementById("name")
+    let name1 = document.getElementById("name")
 
     if(name1.value === ""){
         name1.style.border = "solid 2px red"
@@ -72,7 +72,7 @@ function name_check(){
 
 }
 function surname_check(){
-    surname1 = document.getElementById("surname")
+    let surname1 = document.getElementById("surname")
 
     if(surname1.value === ""){
         surname1.style.border = "solid 2px red"
@@ -83,7 +83,7 @@ function surname_check(){
     }
 }
 function phone_check(){
-    phone1 = document.getElementById("phone")
+    let phone1 = document.getElementById("phone")
     const filterPhone1 = /^\d{9}$/;
 
     if(!filterPhone1.test(phone1.value)){
@@ -96,9 +96,9 @@ function phone_check(){
 }
 
 function compare_password(){
-    x = document.getElementById("pwd");
-    x2 = document.getElementById("pwd2");
-    if(x.value == x2.value){
+    let pass1 = document.getElementById("pwd");
+    let pass2 = document.getElementById("pwd2");
+    if(pass1.value === pass2.value){
         return true
     }else{
         return false
@@ -106,10 +106,9 @@ function compare_password(){
 }
 
 function done(){
-    password_match = compare_password()
+    let password_match = compare_password()
     if(mail_check() && name_check() && surname_check() && phone_check() && password_match){
-        alert("თქვენ წარმატებით დარეგისტრირდით")
-        window.location.reload()
+
     }else if(!password_match){
         alert("პაროლები არ ემთხვევა")
     }else{

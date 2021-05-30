@@ -29,7 +29,7 @@ if (isset($_GET['delete'])) {
 </head>
 <body>
     <?php
-        include "admin.php";
+        require_once "admin.php";
     ?>
     <br>
 

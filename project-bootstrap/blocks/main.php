@@ -1,6 +1,8 @@
 <?php
     require_once "../sql-connect/conn.php";
 ?>
+
+
 <div style="height: 65px; position: relative;"></div>
 <!--Slider-->
 <div id="slider">
@@ -37,15 +39,14 @@
 
 <!--Books Area-->
 
-<h5 class="col lang" key="new_book" >ინფორმაციული ტექნოლოგიები</h5>
+<h5 class="col lang" key="new_book" style="margin-left: 135px !important;">ინფორმაციული ტექნოლოგიები</h5>
 
 <div class="owl-carousel owl-theme" style="width: 82%; margin: auto">
     <?php
     $select_query = "SELECT * FROM book WHERE category_id = 1";
     $result = mysqli_query($conn, $select_query);
 
-    foreach ($result as $items){
-        ?>
+    foreach ($result as $items){?>
         <div >
             <div class="item" >
                 <?php echo $items['title'] ?>
@@ -59,6 +60,7 @@
         <script>
             $(document).ready(function() {
                 $('.owl-carousel').owlCarousel({
+                    autoWidth:true,
                     dots:false,
                     loop:true,
                     margin:10,
@@ -75,7 +77,7 @@
 
 <hr>
 
-<h5 class="col lang" key="new_book" >არქიტექტურა</h5>
+<h5 class="col lang" key="new_book" style="margin-left: 135px !important;">არქიტექტურა</h5>
 
 <div class="owl-carousel owl-theme" style="width: 82%; margin: auto">
     <?php
@@ -97,6 +99,7 @@
         <script>
             $(document).ready(function() {
                 $('.owl-carousel').owlCarousel({
+                    autoWidth:true,
                     dots:false,
                     loop:true,
                     margin:10,

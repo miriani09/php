@@ -1,8 +1,6 @@
 <?php
     require_once "../sql-connect/conn.php";
 
-
-
 if (isset($_GET['submit'])) {
         $dir_pic = "../pic_books/it/";
         $dir_pdf = "../pdf/it/";
@@ -39,7 +37,7 @@ if (isset($_GET['submit'])) {
 </head>
 <body>
 <?php
-    include "admin.php";
+    require_once "admin.php";
 ?>
 <br>
 
