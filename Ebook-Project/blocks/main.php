@@ -41,7 +41,7 @@ require_once "../conn.php";
 
 <!--Books Area-->
 
-<h5 class="col lang" key="new_book" style="margin-left: 135px !important;">ინფორმაციული ტექნოლოგიები</h5>
+<h5 class="col" style="margin-left: 135px !important;">ინფორმაციული ტექნოლოგიები</h5>
 
 <div class="owl-carousel owl-theme" style="width: 82%; margin: auto">
     <?php
@@ -79,7 +79,7 @@ require_once "../conn.php";
 
 <hr>
 
-<h5 class="col lang" key="new_book" style="margin-left: 135px !important;">არქიტექტურა</h5>
+<h5 class="col" style="margin-left: 135px !important;">არქიტექტურა</h5>
 
 <div class="owl-carousel owl-theme" style="width: 82%; margin: auto">
     <?php

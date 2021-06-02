@@ -16,25 +16,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active lang" aria-current="page" href="index.php" key="home">მთავარი</a>
+                        <a class="nav-link active " aria-current="page" href="index.php" >მთავარი</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle lang" href="#" key="category" id="navbarDropdown"
+                        <a class="nav-link active dropdown-toggle " href="#" id="navbarDropdown"
                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             კატეგორია
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item lang" key="book_list1" href="#">ინფორმაციული ტექნოლოგიები</a>
+                            <li><a class="dropdown-item " href="#">ინფორმაციული ტექნოლოგიები</a>
                             </li>
-                            <li><a class="dropdown-item lang" key="book_list2" href="#">სამშენებლო</a></li>
-                            <li><a class="dropdown-item lang" key="book_list3" href="#">ენერგეტიკა</a></li>
+                            <li><a class="dropdown-item " href="#">სამშენებლო</a></li>
+                            <li><a class="dropdown-item " href="#">ენერგეტიკა</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active lang" aria-current="page" href="#" key="about">ჩვენს შესახებ</a>
+                        <a class="nav-link active " aria-current="page" href="#" >ჩვენს შესახებ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active lang" aria-current="page" href="#" key="contact">კონტაქტი</a>
+                        <a class="nav-link active " aria-current="page" href="#" >კონტაქტი</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0">
@@ -49,8 +49,8 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item lang" href="log-in.php">შესვლა</a></li>
-                            <li><a class="dropdown-item lang" href="registration.php">რეგისტრაცია</a></li>
+                            <li><a class="dropdown-item " href="log-in.php">შესვლა</a></li>
+                            <li><a class="dropdown-item " href="registration.php">რეგისტრაცია</a></li>
                         </ul>
                 </ul>
                 <form class="d-flex">

@@ -41,22 +41,22 @@ require_once "header.php";
 ?>
 <div style="height: 65px; position: relative;"></div>
 <!--log-in-->
-<h4 style="color: white;text-align: center;margin-top: 20px;" class="lang" key="auth">შესვლა</h4>
+<h4 style="color: white;text-align: center;margin-top: 20px;" key="auth">შესვლა</h4>
 <hr style="background-color: white; margin-top: 20px;">
-<form method="post" class="">
+<form method="post" >
     <div class="form-group">
-        <input type="email" name="mail" class="form-control lang_placeholder" key="mail" style="box-shadow: none;"
+        <input type="email" name="mail" class="form-control " key="mail" style="box-shadow: none;"
                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ელ.ფოსტა"><br>
     </div>
     <div class="form-group">
-        <input type="password" name="password" class="form-control lang_placeholder" key="password"
+        <input type="password" name="password" class="form-control " key="password"
                style="box-shadow: none;" id="exampleInputPassword1" placeholder="პაროლი"><br>
     </div>
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" style="box-shadow: none;" id="exampleCheck1">
-        <p class="lang" key="save" style="overflow-y: hidden;">დამახსოვრება</p>
+        <p style="overflow-y: hidden;">დამახსოვრება</p>
     </div>
-    <button name="submit" class="btn btn-primary lang">შესვლა</button>
+    <button name="submit" class="btn btn-primary ">შესვლა</button>
 </form>
 
 <script src="js/reg.js"></script>

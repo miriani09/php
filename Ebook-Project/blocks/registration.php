@@ -59,30 +59,30 @@ require_once "header.php";
 <form method="post" action="registration.php">
     <h4 style="color: white;text-align: center;margin-top: 20px;">რეგისტრაცია</h4><hr style="background-color: white; margin-top: 20px;">
     <div class="form-group">
-        <input class="form-control lang_placeholder" name="name" id="name" style="box-shadow: none;" onkeyup="name_check()" placeholder="სახელი"><br>
+        <input class="form-control " name="name" id="name" style="box-shadow: none;" onkeyup="name_check()" placeholder="სახელი"><br>
     </div>
     <div class="form-group">
-        <input  class="form-control lang_placeholder" name="surname" style="box-shadow: none;" id="surname" onkeyup="surname_check()" placeholder="გვარი"><br>
+        <input  class="form-control " name="surname" style="box-shadow: none;" id="surname" onkeyup="surname_check()" placeholder="გვარი"><br>
     </div>
     <div class="form-group">
         <div >
-            <input type="password" class="form-control lang_placeholder" name="password" style="box-shadow: none;" id="pwd"  onkeyup="validatePassword(this.value);" placeholder="პაროლი">
+            <input type="password" class="form-control " name="password" style="box-shadow: none;" id="pwd"  onkeyup="validatePassword(this.value);" placeholder="პაროლი">
         </div>
         <p  id="msg" style="float: left;font-size: 10px;"></p>
 
         <br>
     </div>
     <div class="form-group">
-        <input type="password" class="form-control lang_placeholder" name="re_password" style="box-shadow: none;" id="pwd2" placeholder="გაიმეორეთ პაროლი">
-        <input type="checkbox" onclick="password_show()" ><label style="font-size: 10px; margin-left: 10px;" class="lang" key="show_psw">პაროლის ჩვენება</label>
+        <input type="password" class="form-control " name="re_password" style="box-shadow: none;" id="pwd2" placeholder="გაიმეორეთ პაროლი">
+        <input type="checkbox" onclick="password_show()" ><label style="font-size: 10px; margin-left: 10px;" >პაროლის ჩვენება</label>
     </div><br>
     <div class="form-group">
-        <input type="email" class="form-control lang_placeholder" style="box-shadow: none;" name="mail" id="mail" onkeyup="mail_check()"  placeholder="example@email.com"><br>
+        <input type="email" class="form-control " style="box-shadow: none;" name="mail" id="mail" onkeyup="mail_check()"  placeholder="example@email.com"><br>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control lang_placeholder" name="phone" style="box-shadow: none;" id="phone" onkeyup="phone_check()" placeholder="მობ.ნომერი - 512 345 678"><br>
+        <input type="text" class="form-control " name="phone" style="box-shadow: none;" id="phone" onkeyup="phone_check()" placeholder="მობ.ნომერი - 512 345 678"><br>
     </div>
-    <button id="button" class="btn btn-primary lang" name="submit" onclick="done()" style="box-shadow: none;">შესვლა</button>
+    <button id="button" class="btn btn-primary " name="submit" onclick="done()" style="box-shadow: none;">შესვლა</button>
 </form>
 
 
