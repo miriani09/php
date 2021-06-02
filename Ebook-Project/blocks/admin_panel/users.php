@@ -60,7 +60,7 @@ include "admin_page.php";
         <td><?php echo $items['mail'] ?></td>
         <td><?php echo $items['phone'] ?></td>
         <td>
-            <a href="users.php?user=<?= $items['id'] ?>" type="button" class="btn btn-success">Edit</a>
+            <a href="edit_profile.php?user=<?= $items['id'] ?>" type="button" class="btn btn-success">Edit</a>
 
             <a href="users.php?user=<?= $items['id'] ?>" type="button" class="btn btn-danger">Delete</a>
         </td>
