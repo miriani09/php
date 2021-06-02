@@ -113,7 +113,7 @@ function compare_password() {
 function done() {
     let password_match = compare_password()
     if (mail_check() && name_check() && surname_check() && phone_check() && password_match) {
-
+        alert('თქვენ წარმატებით დარეგისტრირდით')
     } else if (!password_match) {
         alert("პაროლები არ ემთხვევა")
     } else {

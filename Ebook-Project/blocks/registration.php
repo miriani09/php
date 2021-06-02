@@ -4,19 +4,19 @@ require_once "../conn.php";
 if(isset($_POST['submit'])) {
 
     if (preg_match("/\S+/", $_POST['name']) === 0) {
-        //echo "<script>document.getElement('d').innerHTML = 'asdqwe'</script>";
+        echo "<script>alert('Name required')</script>";
     }
     elseif (preg_match("/\S+/", $_POST['surname']) === 0) {
-        //echo "<script>alert('Surname required')</script>";
+        echo "<script>alert('Surname required')</script>";
     }
     elseif (preg_match("/.{8,}/", $_POST['password']) === 0) {
-        //echo "<script>alert('Password must be contain 8 symbol')</script>";
+        echo "<script>alert('Password must be contain 8 symbol')</script>";
     }
     elseif (strcmp($_POST['password'], $_POST['re_password'])) {
-        //echo "<script>alert('Passwords not matches')</script>";
+        echo "<script>alert('Passwords not matches')</script>";
     }
     elseif (preg_match("/.{9,}/", $_POST['phone']) === 0) {
-        //echo "<script>alert('Phone must be contain georgian format')</script>";
+        echo "<script>alert('Phone must be contain georgian format')</script>";
     }else{
         $name = mysqli_real_escape_string($conn, $_POST['name']);
         $surname = mysqli_real_escape_string($conn, $_POST['surname']);
@@ -32,9 +32,6 @@ if(isset($_POST['submit'])) {
         } else {
             $sql = "INSERT INTO users(`name`, `surname`, `password`, `mail`, `phone`) VALUES ('$name', '$surname', '$password', '$mail', '$phone')";
             $query = mysqli_query($conn, $sql);
-
-            echo "<script>alert('You are successfully registered')</script>";
-            header('location:log-in.php');
         }
     }
 }
