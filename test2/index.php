@@ -1,6 +1,6 @@
 <?php
 require_once "./sql-connect/conn.php";
-include "./sql-connect/queries.php";
+require_once "./sql-connect/queries.php";
 ?>
 <!doctype html>
 <html lang="en">

@@ -7,7 +7,7 @@ if (isset($_GET['user'])) {
     $user = $_GET['user'];
     $del_query = "DELETE FROM users WHERE id = '$user'";
     if (mysqli_query($conn, $del_query)) {
-        header("location:users.php?user=");
+        header("location:users.php?users=");
     } else {
         echo "error: " . $del_query . "<br>" . mysqli_error($conn);
     }
