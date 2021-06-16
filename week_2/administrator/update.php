@@ -2,7 +2,7 @@
 require_once "../sql-conn/conn.php";
 
 $edit = $_GET['edit'];
-$select_query = "SELECT * FROM company WHERE id = '$edit'";
+$select_query = "SELECT * FROM aplicant WHERE id = '$edit'";
 $result = mysqli_query($conn, $select_query);
 
 foreach ($result as $i => $items) {
@@ -12,7 +12,7 @@ foreach ($result as $i => $items) {
     $password = $items['password'];
 }
 
-function rand_string($length = 5) {
+function rand_string($length = 4) {
     $characters = 'abcdefghijklmnopqrstuvwxyz';
     $charactersLength = strlen($characters);
     $randomString = '';
@@ -28,19 +28,19 @@ if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $id= $_POST['id'];
     $date = $_POST['date'];
-    $password = rand_string();
+    $password = rand_string().rand(0,9);
 
     if (strlen($title) >= 5 && strlen($title) <= 10 && strlen($id) == 9){
-        $edit_query = "UPDATE company SET title='$title',id_code='$id',date='$date',password='$password' WHERE id = '$edit'";
+        $edit_query = "UPDATE aplicant SET title='$title',id_code='$id',date='$date',password='$password' WHERE id = '$edit'";
         if (mysqli_query($conn, $edit_query)){
-            header("location:../administrator.php");
+            header("location:administrator.php");
         }
     }else{
         echo '<script>alert("enter correct")</script>';
     }
 
     if (mysqli_query($conn, $edit_query)) {
-        header("location: ../administrator.php");
+        header("location:administrator.php");
     } else {
         echo "error: " . $edit_query . "<br>" . mysqli_error($conn);
     }

@@ -3,7 +3,7 @@ require_once "../sql-conn/conn.php";
 
 if (isset($_GET['delete'])){
     $del = $_GET['delete'];
-    $delete_company = "DELETE FROM aplicant WHERE id = '$del'";
+    $delete_company = "DELETE FROM administrator WHERE id = '$del'";
     if (mysqli_query($conn, $delete_company)){
         header("location:list_applicant.php");
     }
@@ -18,25 +18,25 @@ if (isset($_GET['delete'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Book</title>
+    <title>CV</title>
 </head>
 <body>
-<h1 style="text-align: center"><a href="administrator.php" class="link">List Company</a></h1>
+<h1 style="text-align: center"><a href="administrator.php" class="link">List Applicants</a></h1>
 <hr>
 
 <table class="table w-100 p-3">
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Id Code</th>
-        <th scope="col">Date</th>
+        <th scope="col">Name</th>
+        <th scope="col">Id-Number</th>
+        <th scope="col">Registration Date</th>
         <th scope="col">Password</th>
         <th></th>
     </tr>
     </thead>
     <?php
-    $select_query = "SELECT * FROM aplicant";
+    $select_query = "SELECT * FROM administrator";
     $result = mysqli_query($conn, $select_query);
 
     foreach ($result as $i => $items){
@@ -44,8 +44,8 @@ if (isset($_GET['delete'])){
     <tbody>
     <tr>
         <th scope="row"><?php echo $i+1?></th>
-        <td><?php echo $items['title']?></td>
-        <td><?php echo $items['id_code']?></td>
+        <td><?php echo $items['name']?></td>
+        <td><?php echo $items['id_number']?></td>
         <td><?php echo $items['date']?></td>
         <td><?php echo $items['password']?></td>
         <td>

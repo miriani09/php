@@ -5,7 +5,7 @@ if (isset($_GET['delete'])){
     $del = $_GET['delete'];
     $delete_company = "DELETE FROM aplicant WHERE id = '$del'";
     if (mysqli_query($conn, $delete_company)){
-        header("location:list_applicant.php");
+        header("location:list_cv.php");
     }
 }
 ?>
@@ -18,20 +18,19 @@ if (isset($_GET['delete'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Book</title>
+    <title>CV</title>
 </head>
 <body>
-<h1 style="text-align: center"><a href="administrator.php" class="link">List Company</a></h1>
+<h1 style="text-align: center"><a href="applicant.php" class="link">List CV</a></h1>
 <hr>
 
 <table class="table w-100 p-3">
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Id Code</th>
-        <th scope="col">Date</th>
-        <th scope="col">Password</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Education</th>
+        <th scope="col">Work Experience</th>
         <th></th>
     </tr>
     </thead>
@@ -44,10 +43,9 @@ if (isset($_GET['delete'])){
     <tbody>
     <tr>
         <th scope="row"><?php echo $i+1?></th>
-        <td><?php echo $items['title']?></td>
-        <td><?php echo $items['id_code']?></td>
-        <td><?php echo $items['date']?></td>
-        <td><?php echo $items['password']?></td>
+        <td><?php echo $items['phone']?></td>
+        <td><?php echo $items['education']?></td>
+        <td><?php echo $items['work_exp']?></td>
         <td>
             <a href="update.php?edit=<?=$items['id']?>" type="button" class="btn btn-primary">Edit</a>
             <a href="?delete=<?=$items['id']?>" type="button" class="btn btn-danger">Delete</a>

@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
     $edit_query = "UPDATE add_vacancy SET title='$title',description='$description',date='$date' WHERE id = '$edit'";
     if (mysqli_query($conn, $edit_query)){
-        header("location:company.php");
+        header("location:aplicant.php");
     }
 }
 

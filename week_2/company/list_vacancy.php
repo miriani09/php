@@ -5,7 +5,7 @@ if (isset($_GET['delete'])){
     $del = $_GET['delete'];
     $delete_company = "DELETE FROM add_vacancy WHERE id = '$del'";
     if (mysqli_query($conn, $delete_company)){
-        header("location:list_vacancy.php");
+        header("location:list_cv.php");
     }
 }
 ?>

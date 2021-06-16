@@ -1,7 +1,7 @@
 <?php
 require_once "../sql-conn/conn.php";
 
-function rand_string($length = 5) {
+function rand_string($length = 4) {
     $characters = 'abcdefghijklmnopqrstuvwxyz';
     $charactersLength = strlen($characters);
     $randomString = '';
@@ -15,13 +15,13 @@ if (isset($_GET['submit'])){
     $title = $_GET['title'];
     $id= $_GET['id'];
     $date = date('Y-m-d', strtotime( '+'.mt_rand(0,31).mt_rand(0,12).mt_rand(1950,2021) )); ;
-    $password = rand_string();
+    $password = rand_string().rand(0,9);
 
     if (strlen($title) >= 5 && strlen($title) <= 10 && strlen($id) == 9){
-        $insert = "INSERT INTO company(title, id_code, date, password)
+        $insert = "INSERT INTO aplicant(title, id_code, date, password)
                 VALUES ('$title', '$id', '$date', '$password')";
         if (mysqli_query($conn, $insert)){
-            header("location:../administrator.php");
+            header("location:administrator.php");
         }
     }else{
         echo '<script>alert("enter correct")</script>';

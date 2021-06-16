@@ -2,18 +2,18 @@
 require_once "../sql-conn/conn.php";
 
 if (isset($_GET['submit'])){
-    $title = $_GET['title'];
-    $description= $_GET['description'];
-    $date = date('Y-m-d');
+    $phone = $_GET['phone'];
+    $education = $_GET['education'];
+    $work_exp = $_GET['work_exp'];
 
-    if (!empty($title) && !empty($description) && !empty($date)){
-        $insert = "INSERT INTO add_vacancy(title, description, date)
-                VALUES ('$title','$description', '$date')";
+    if (!empty($phone) && strlen($phone) == 9 && !empty($education) && !empty($work_exp)){
+        $insert = "INSERT INTO aplicant(phone, education, work_exp)
+                VALUES ('$phone','$education', '$work_exp')";
         if (mysqli_query($conn, $insert)){
-            header("location:aplicant.php");
+            header("location:applicant.php");
         }
     }else{
-        echo '<script>alert("enter correct")</script>';
+        echo '<script>alert("info must be entered or phone must be contain 9 symbol")</script>';
     }
 }
 ?>
@@ -26,18 +26,18 @@ if (isset($_GET['submit'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Book</title>
+    <title>CV</title>
 </head>
 <body>
-<h1 style="text-align: center"><a href="company.php" class="link">Add Vacancy</a></h1>
+<h1 style="text-align: center"><a href="applicant.php" class="link">Add Cv</a></h1>
 <hr>
 
 <form method="get" class="form1" style="width: 400px; margin-left: 30px">
-    <input class="form-control" name="title" type="text" placeholder="Title" aria-label="default input example">
+    <input class="form-control" name="phone" type="number" placeholder="Phone">
     <br>
-    <input class="form-control" name="description" type="text" placeholder="Description" aria-label="default input example">
+    <textarea class="form-control" name="education" type="text" placeholder="Education"></textarea>
     <br>
-    <input class="form-control" name="date" type="date" aria-label="default input example">
+    <textarea class="form-control" name="work_exp" type="text" placeholder="Work Experience"></textarea>
     <br>
     <button name="submit" class="btn btn-primary">Submit</button>
     <button name="cancel" class="btn btn-danger"><a href="../administrator/administrator.php" style="text-decoration: none;color: white">Cancel</a></button>

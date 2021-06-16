@@ -5,79 +5,25 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Week 12</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
 <body>
-<div class="container">
-    <input type="text" id="user">
-    <br><br>
-    <button onclick="send()">SEND</button>
-</div>
-<script>
-    function send(){
-        var user = $("#user").val();
-        console.log(user);
-        var products = ["Apply", "lemon", "Banana"];
-        $.ajax({
-            type:"post",
-            url: "action.php",
-            data:{
-                user:user,
-                pass:"1234",
-                products: products
-            },
-            success: function(data){
-                console.log(data);
-                var d = JSON.parse(data);
-                console.log(d);
-            }
-        });
+    <?php
+    if (isset($_POST['submit'])) {
+        $image = $_FILES['image'] ?? null;
+        echo "<pre>";
+        print_r($image);
+        echo "</pre>";
+        $image_name = $image['name'];
+        $image_path = $image['tmp_name'];
+        move_uploaded_file($image_path, 'images/'.$image_name);
     }
-</script>
-</body>
-</html><!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Week 12</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
-</head>
-<body>
-<div class="container">
-    <input type="text" id="user">
-    <br><br>
-    <button onclick="send()">SEND</button>
-</div>
-<script>
-    function send(){
-        var user = $("#user").val();
-        console.log(user);
-        var products = ["Apply", "lemon", "Banana"];
-        $.ajax({
-            type:"post",
-            url: "action.php",
-            data:{
-                user:user,
-                pass:"1234",
-                products: products
-            },
-            success: function(data){
-                console.log(data);
-                var d = JSON.parse(data);
-                console.log(d);
-            }
-        });
-    }
-</script>
+    ?>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <br><br>
+        <button name="submit">Upload</button>
+    </form>
+<img src="<?php echo 'images/'.$image_name ?>">
 </body>
 </html>
